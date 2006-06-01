@@ -11,13 +11,14 @@ Legacy Windows simulation of cars, road intersections and traffic light timing
 
 ### Overview
 
-Trafico helps a learner see how the rules at an intersection affect the cars approaching it. The scene draws roads, vehicles and signal colours on screen. The May release initializes a small grid of roads and sends simulated cars between positions. Its counters show how many still have to finish and how many arrived.
+Trafico helps a learner see how the rules at an intersection affect the cars approaching it. The scene draws roads, vehicles and signal colours on screen. The June release draws one cross street and three separate junctions. The software adds cars at the road entrances and shows vehicle counts, a simulated clock and the time left before each light changes.
 
 ### Features
 
 - Shows cars moving through the simulated road network.
 - Draws green and red signals and updates counters as the simulation advances.
-- Routes cars between positions and counts the ones that reach their destinations.
+- Adjusts the red times independently for the vertical and horizontal roads at a selected junction.
+- Shows a countdown to the next signal change and the simulated time.
 
 ### Requirements
 
@@ -34,11 +35,11 @@ MSBuild Trafico.sln /m:2 /nr:false /t:Rebuild /p:Configuration=Release /p:Platfo
 
 ### Usage
 
-Launch `Trafico.exe`. The roads, vehicles and traffic lights start moving as soon as the window opens. Watch **Faltan** (cars still travelling) and **Llegaron** (cars that arrived).
+Launch `Trafico.exe`. Double-click the centre of a visible junction to open **Semaforos**. Set the red duration for each direction and the yellow duration. Click **Aceptar** and reopen the same junction to check the values.
 
 ### Project structure
 
-`TraficoView.cpp` draws the scene and advances the simulation. `Carretera` describes a road and `Semaforo` implements a signal. `Ruta` and `Nodo` describe paths and places where they connect.
+`TraficoView.cpp` draws the scene and advances the simulation. `Carretera` describes a road and `Semaforo` implements a signal. The June source under `Trafico/` also contains the junction classes and the settings dialog.
 
 ### Support
 
@@ -51,6 +52,8 @@ Build the Win32 solution and compare vehicle motion and signal settings before m
 ### History
 
 The latest source entries in `Traficov1.rar` are dated 19 May 2006. The timestamp uses that date at 12:00 UTC because the archive does not record a Git commit time.
+
+`Trafico.rar` holds the update dated 1 June 2006. It changes the route model, draws three junctions and adds a settings dialog for each traffic light. The reconstruction in 2026 retains its original solution under `Trafico.legacy.sln` and the original `.vcproj` beside the converted project.
 
 ### License
 
@@ -68,13 +71,14 @@ Legado de Windows para simular autos, cruces y tiempos de semáforos
 
 ### Descripción general
 
-Trafico permite observar cómo las reglas de un cruce afectan a los autos que se acercan. Dibuja las calles, los vehículos y el color de cada semáforo en la pantalla. La versión de mayo prepara una cuadrícula de calles y mueve autos ficticios entre distintos puntos. Los contadores muestran cuántos faltan por llegar y cuántos llegaron.
+Trafico permite observar cómo las reglas de un cruce afectan a los autos que se acercan. Dibuja las calles, los vehículos y el color de cada semáforo en la pantalla. La versión de junio dibuja una calle transversal y tres cruces. El programa agrega autos en los accesos y muestra la cantidad de vehículos, un reloj simulado y el tiempo que falta para el siguiente cambio de semáforo.
 
 ### Funciones
 
 - Muestra autos que avanzan por una red de calles ficticia.
 - Dibuja las señales en verde y rojo y actualiza los contadores mientras avanza.
-- Traza rutas entre posiciones y cuenta los autos que llegan a su destino.
+- Ajusta por separado el rojo de la calle vertical y el de la horizontal en un cruce.
+- Muestra la cuenta regresiva para el cambio de señal y el tiempo simulado.
 
 ### Requisitos
 
@@ -91,11 +95,11 @@ MSBuild Trafico.sln /m:2 /nr:false /t:Rebuild /p:Configuration=Release /p:Platfo
 
 ### Uso
 
-Abre `Trafico.exe`. Las calles, autos y semáforos aparecen al iniciar la ventana. Observa **Faltan**, que cuenta los autos aún en camino, y **Llegaron**, que cuenta los que terminaron la ruta.
+Abre `Trafico.exe`. Haz doble clic en el centro de un cruce visible para abrir **Semaforos**. Indica la duración del rojo en cada dirección y la del amarillo. Pulsa **Aceptar** y vuelve a abrir el mismo cruce para comprobar los valores.
 
 ### Estructura del proyecto
 
-`TraficoView.cpp` dibuja la escena y hace avanzar la simulación. `Carretera` describe una calle y `Semaforo` implementa una señal. `Ruta` y `Nodo` describen los recorridos y los puntos donde se conectan.
+`TraficoView.cpp` dibuja la escena y hace avanzar la simulación. `Carretera` describe una calle y `Semaforo` implementa una señal. La fuente de junio, en `Trafico/`, incorpora las clases de los cruces y el diálogo de ajustes.
 
 ### Soporte
 
@@ -108,6 +112,8 @@ Compila la solución Win32 y compara el movimiento de los autos y los ajustes de
 ### Historial
 
 Los archivos fuente más recientes de `Traficov1.rar` son del 19 de mayo de 2006. Se usó esa fecha a las 12:00 UTC porque el respaldo no conserva una hora de commit en Git.
+
+`Trafico.rar` conserva la edición fechada el 1 de junio de 2006. Cambia el modelo de rutas, dibuja tres cruces y permite configurar cada semáforo. La reconstrucción de 2026 mantiene su solución original como `Trafico.legacy.sln` y el `.vcproj` al lado del proyecto convertido.
 
 ### Licencia
 

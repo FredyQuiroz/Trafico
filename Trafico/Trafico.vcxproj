@@ -12,7 +12,7 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>18.0</VCProjectVersion>
-    <ProjectGuid>{F2DA9BAE-4C94-4743-A5E6-0EB50393A6F5}</ProjectGuid>
+    <ProjectGuid>{4D1A35E8-B867-4DA2-BBA2-D37ED6A7E3F9}</ProjectGuid>
     <RootNamespace>Trafico</RootNamespace>
     <Keyword>MFCProj</Keyword>
   </PropertyGroup>
@@ -112,12 +112,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Auto.cpp" />
+    <ClCompile Include="Automovil.cpp" />
     <ClCompile Include="Carretera.cpp" />
+    <ClCompile Include="DlgSemaforos.cpp" />
+    <ClCompile Include="Interseccion.cpp" />
     <ClCompile Include="MainFrm.cpp" />
-    <ClCompile Include="Nodo.cpp" />
-    <ClCompile Include="Ruta.cpp" />
+    <ClCompile Include="Rectangulo.cpp" />
     <ClCompile Include="Semaforo.cpp" />
+    <ClCompile Include="SemaforoInter.cpp" />
+    <ClCompile Include="StartPoint.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
@@ -127,13 +130,16 @@
     <ClCompile Include="TraficoView.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Auto.h" />
+    <ClInclude Include="Automovil.h" />
     <ClInclude Include="Carretera.h" />
+    <ClInclude Include="DlgSemaforos.h" />
+    <ClInclude Include="Interseccion.h" />
     <ClInclude Include="MainFrm.h" />
-    <ClInclude Include="Nodo.h" />
+    <ClInclude Include="Rectangulo.h" />
     <ClInclude Include="Resource.h" />
-    <ClInclude Include="Ruta.h" />
     <ClInclude Include="Semaforo.h" />
+    <ClInclude Include="SemaforoInter.h" />
+    <ClInclude Include="StartPoint.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="Trafico.h" />
     <ClInclude Include="TraficoDoc.h" />
@@ -156,4 +162,9 @@
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties RESOURCE_FILE="Trafico.rc" />
+    </VisualStudio>
+  </ProjectExtensions>
 </Project>

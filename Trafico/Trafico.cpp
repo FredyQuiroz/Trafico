@@ -69,8 +69,8 @@ BOOL CTraficoApp::InitInstance()
 	// Cambie la clave del Registro en la que se almacena la configuración
 	// TODO: debe modificar esta cadena para que contenga información correcta
 	// como el nombre de su compañía u organización
-	SetRegistryKey(_T("JSoft"));
-	LoadStdProfileSettings(4);  // Cargar opciones de archivo INI estándar (incluidas las de la lista MRU)
+	SetRegistryKey(_T("Aplicaciones generadas con el Asistente para aplicaciones local"));
+	LoadStdProfileSettings(0);  // Cargar opciones de archivo INI estándar (incluidas las de la lista MRU)
 	// Registrar las plantillas de documento de la aplicación. Las plantillas de documento
 	//  sirven como conexión entre documentos, ventanas de marco y vistas
 	CSingleDocTemplate* pDocTemplate;

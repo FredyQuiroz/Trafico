@@ -29,7 +29,7 @@ public:
 	virtual void Dump(CDumpContext& dc) const;
 #endif
 
-public:  // Miembros incrustados de la barra de control
+protected:  // Miembros incrustados de la barra de control
 	CStatusBar  m_wndStatusBar;
 	CToolBar    m_wndToolBar;
 

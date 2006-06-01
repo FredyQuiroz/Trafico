@@ -3,27 +3,27 @@
 
 
 #pragma once
-
-# include "ruta.h"
+# include "automovil.h"
 
 class CTraficoView : public CView
 {
 protected: // Crear sólo a partir de serialización
 	CTraficoView();
 	DECLARE_DYNCREATE(CTraficoView)
-	int		m_nTotalC;
-	int		m_nFinal;
+	int		m_nTiempo;
 
 // Atributos
 public:
 	CTraficoDoc* GetDocument() const;
-
+	CPtrArray		m_pCarreteras;
+	CPtrArray		m_pIntersecciones;
+	CPtrArray		m_pAutos;
+	CPtrArray		m_pInicio;
+	CPtrArray		m_pSemaforos;
+	void Clean();
 // Operaciones
 public:
-	CPtrArray		m_pCarreteras;
-	CPtrArray		m_pAutos;
-	CPtrArray		m_pSemaforos;
-	CRuta			m_pRuta;
+
 // Reemplazos
 public:
 	virtual void OnDraw(CDC* pDC);  // Reemplazado para dibujar esta vista
@@ -32,6 +32,7 @@ protected:
 	virtual BOOL OnPreparePrinting(CPrintInfo* pInfo);
 	virtual void OnBeginPrinting(CDC* pDC, CPrintInfo* pInfo);
 	virtual void OnEndPrinting(CDC* pDC, CPrintInfo* pInfo);
+	bool	MakeStep(CAutomovil *autom, CRect rect);
 
 // Implementación
 public:
@@ -51,9 +52,7 @@ public:
 public:
 	afx_msg void OnTimer(UINT_PTR nIDEvent);
 public:
-	afx_msg void OnDestroy();
-public:
-	afx_msg void OnMouseMove(UINT nFlags, CPoint point);
+	afx_msg void OnLButtonDblClk(UINT nFlags, CPoint point);
 };
 
 #ifndef _DEBUG  // Versión de depuración en TraficoView.cpp

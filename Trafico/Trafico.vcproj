@@ -3,7 +3,7 @@
 	ProjectType="Visual C++"
 	Version="8,00"
 	Name="Trafico"
-	ProjectGUID="{F2DA9BAE-4C94-4743-A5E6-0EB50393A6F5}"
+	ProjectGUID="{4D1A35E8-B867-4DA2-BBA2-D37ED6A7E3F9}"
 	RootNamespace="Trafico"
 	Keyword="MFCProj"
 	>
@@ -190,7 +190,7 @@
 			UniqueIdentifier="{4FC737F1-C7A5-4376-A066-2A32D752A2FF}"
 			>
 			<File
-				RelativePath=".\Auto.cpp"
+				RelativePath=".\Automovil.cpp"
 				>
 			</File>
 			<File
@@ -198,19 +198,31 @@
 				>
 			</File>
 			<File
+				RelativePath=".\DlgSemaforos.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\Interseccion.cpp"
+				>
+			</File>
+			<File
 				RelativePath=".\MainFrm.cpp"
 				>
 			</File>
 			<File
-				RelativePath=".\Nodo.cpp"
-				>
-			</File>
-			<File
-				RelativePath=".\Ruta.cpp"
+				RelativePath=".\Rectangulo.cpp"
 				>
 			</File>
 			<File
 				RelativePath=".\Semaforo.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\SemaforoInter.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\StartPoint.cpp"
 				>
 			</File>
 			<File
@@ -252,7 +264,7 @@
 			UniqueIdentifier="{93995380-89BD-4b04-88EB-625FBE52EBFB}"
 			>
 			<File
-				RelativePath=".\Auto.h"
+				RelativePath=".\Automovil.h"
 				>
 			</File>
 			<File
@@ -260,11 +272,19 @@
 				>
 			</File>
 			<File
+				RelativePath=".\DlgSemaforos.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Interseccion.h"
+				>
+			</File>
+			<File
 				RelativePath=".\MainFrm.h"
 				>
 			</File>
 			<File
-				RelativePath=".\Nodo.h"
+				RelativePath=".\Rectangulo.h"
 				>
 			</File>
 			<File
@@ -272,11 +292,15 @@
 				>
 			</File>
 			<File
-				RelativePath=".\Ruta.h"
+				RelativePath=".\Semaforo.h"
 				>
 			</File>
 			<File
-				RelativePath=".\Semaforo.h"
+				RelativePath=".\SemaforoInter.h"
+				>
+			</File>
+			<File
+				RelativePath=".\StartPoint.h"
 				>
 			</File>
 			<File
@@ -328,5 +352,9 @@
 		</File>
 	</Files>
 	<Globals>
+		<Global
+			Name="RESOURCE_FILE"
+			Value="Trafico.rc"
+		/>
 	</Globals>
 </VisualStudioProject>
