@@ -37,6 +37,8 @@ MSBuild Trafico.sln /m:2 /nr:false /t:Rebuild /p:Configuration=Release /p:Platfo
 
 Launch `Trafico.exe`. Double-click the centre of a visible junction to open **Semaforos**. Set the red duration for each direction and the yellow duration. Click **Aceptar** and reopen the same junction to check the values.
 
+If a junction is outside the visible area, enlarge the window and choose **Archivo → Nuevo**. This starts a fresh simulation using the new window size, with new vehicle counters.
+
 ### Project structure
 
 `TraficoView.cpp` draws the scene and advances the simulation. `Carretera` describes a road and `Semaforo` implements a signal. The June source under `Trafico/` also contains the junction classes and the settings dialog.
@@ -54,6 +56,8 @@ Build the Win32 solution and compare vehicle motion and signal settings before m
 The latest source entries in `Traficov1.rar` are dated 19 May 2006. The timestamp uses that date at 12:00 UTC because the archive does not record a Git commit time.
 
 `Trafico.rar` holds the update dated 1 June 2006. It changes the route model, draws three junctions and adds a settings dialog for each traffic light. The reconstruction in 2026 retains its original solution under `Trafico.legacy.sln` and the original `.vcproj` beside the converted project.
+
+The first documentation pass explains how to restart the simulation after resizing so the layout fits the window.
 
 ### License
 
@@ -97,6 +101,8 @@ MSBuild Trafico.sln /m:2 /nr:false /t:Rebuild /p:Configuration=Release /p:Platfo
 
 Abre `Trafico.exe`. Haz doble clic en el centro de un cruce visible para abrir **Semaforos**. Indica la duración del rojo en cada dirección y la del amarillo. Pulsa **Aceptar** y vuelve a abrir el mismo cruce para comprobar los valores.
 
+Si un cruce queda fuera del área visible, agranda la ventana y elige **Archivo → Nuevo**. Esto inicia una simulación con el tamaño de ventana nuevo y reinicia los contadores de autos.
+
 ### Estructura del proyecto
 
 `TraficoView.cpp` dibuja la escena y hace avanzar la simulación. `Carretera` describe una calle y `Semaforo` implementa una señal. La fuente de junio, en `Trafico/`, incorpora las clases de los cruces y el diálogo de ajustes.
@@ -114,6 +120,8 @@ Compila la solución Win32 y compara el movimiento de los autos y los ajustes de
 Los archivos fuente más recientes de `Traficov1.rar` son del 19 de mayo de 2006. Se usó esa fecha a las 12:00 UTC porque el respaldo no conserva una hora de commit en Git.
 
 `Trafico.rar` conserva la edición fechada el 1 de junio de 2006. Cambia el modelo de rutas, dibuja tres cruces y permite configurar cada semáforo. La reconstrucción de 2026 mantiene su solución original como `Trafico.legacy.sln` y el `.vcproj` al lado del proyecto convertido.
+
+La primera revisión de documentación explica cómo volver a iniciar la simulación tras cambiar el tamaño para que el dibujo quepa en la ventana.
 
 ### Licencia
 
