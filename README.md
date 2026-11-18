@@ -59,6 +59,16 @@ The latest source entries in `Traficov1.rar` are dated 19 May 2006. The timestam
 
 The first documentation pass explains how to restart the simulation after resizing so the layout fits the window.
 
+### Verification
+
+**19 November 2026.** Windows 11 Pro build 26300, Visual Studio Community 2026 18.10.3, MSBuild 18.10.1.42706, MSVC 14.51.36231 and Windows SDK 10.0.26100.0. The commands above built and ran each of the four revisions. The May copy moved cars across the grid and showed the arrival counters. In the June copies, **Archivo → Nuevo** rebuilt the three-junction layout after resizing. The dialog kept red times of 43 and 65 simulated seconds and a yellow time of 7 when reopened. All processes closed normally.
+
+![May 2006 simulation with blue vehicles on the grid and the arrival count](docs/media/may-grid.png)
+
+![June 2006 simulation with moving cars, three junctions and signal countdowns](docs/media/june-motion.gif)
+
+![The traffic-light dialog shows red durations 43 and 65 and yellow duration 7](docs/media/signal-times.png)
+
 ### License
 
 The project’s own code and documentation use the [MIT license](LICENSE).
@@ -122,6 +132,16 @@ Los archivos fuente más recientes de `Traficov1.rar` son del 19 de mayo de 2006
 `Trafico.rar` conserva la edición fechada el 1 de junio de 2006. Cambia el modelo de rutas, dibuja tres cruces y permite configurar cada semáforo. La reconstrucción de 2026 mantiene su solución original como `Trafico.legacy.sln` y el `.vcproj` al lado del proyecto convertido.
 
 La primera revisión de documentación explica cómo volver a iniciar la simulación tras cambiar el tamaño para que el dibujo quepa en la ventana.
+
+### Verificación
+
+**19 de noviembre de 2026.** Windows 11 Pro compilación 26300, Visual Studio Community 2026 18.10.3, MSBuild 18.10.1.42706, MSVC 14.51.36231 y SDK de Windows 10.0.26100.0. Los comandos anteriores compilaron y ejecutaron los cuatro commits. La copia de mayo movió autos en la cuadrícula y mostró los contadores de llegadas. En las copias de junio, **Archivo → Nuevo** volvió a crear los tres cruces después de ajustar la ventana. Al reabrir el diálogo se conservaron 43 y 65 segundos simulados de rojo y 7 de amarillo. Todos los procesos cerraron normalmente.
+
+![Simulación de mayo de 2006 con autos azules, calles en cuadrícula y recuento de llegadas](docs/media/may-grid.png)
+
+![Simulación de junio de 2006 con autos en movimiento, tres cruces y cuenta regresiva de los semáforos](docs/media/june-motion.gif)
+
+![El diálogo de semáforos muestra 43 y 65 para el rojo y 7 para el amarillo](docs/media/signal-times.png)
 
 ### Licencia
 
